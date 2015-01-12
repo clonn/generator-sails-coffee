@@ -39,44 +39,36 @@ module.exports = yeoman.generators.Base.extend({
 
   writing: {
     app: function () {
-      // var self = this;
-      // self.fsExtra.copy(
-      //   self.templatePath('/application'),
-      //   self.destinationPath('.'),
-      //   function(err) {
-      //     if (err) {
-      //       console.log("kerker ---")
-      //       return console.error(err) && process.exit(0);
-      //     }
+      var self = this;
+      self.fsExtra.copy(
+        self.templatePath('application'),
+        self.destinationPath('.'),
+        function(err) {
+          if (err) {
+            return console.error(err) && process.exit(0);
+          }
 
-      //     // self.fs.copyTpl(
-      //     //   self.templatePath('package.json'),
-      //     //   self.destinationPath('package.json'),
-      //     //   { name: self.name }
-      //     // );
+          console.log("success!");
+      });
 
-      //     // self.fs.copyTpl(
-      //     //   self.templatePath('bower.json'),
-      //     //   self.destinationPath('bower.json'),
-      //     //   { name: self.name }
-      //     // );
+      self.fs.copyTpl(
+        self.templatePath('package.json'),
+        self.destinationPath('package.json'),
+        { name: self.name }
+      );
 
-      //     // self.fs.copyTpl(
-      //     //   self.templatePath('README.md'),
-      //     //   self.destinationPath('README.md'),
-      //     //   { name: self.name }
-      //     // );
+      self.fs.copyTpl(
+        self.templatePath('bower.json'),
+        self.destinationPath('bower.json'),
+        { name: self.name }
+      );
 
-      //     // self.fs.copy(
-      //     //   self.templatePath('.bowerrc'),
-      //     //   self.destinationPath('.bowerrc')
-      //     // );
+      self.fs.copyTpl(
+        self.templatePath('README.md'),
+        self.destinationPath('README.md'),
+        { name: self.name }
+      );
 
-      //     console.log("success!");
-      // });
-
-
-      
       // this.fs.copy(
       //   this.templatePath('_package.json'),
       //   this.destinationPath('package.json')
@@ -85,18 +77,18 @@ module.exports = yeoman.generators.Base.extend({
       //   this.templatePath('_bower.json'),
       //   this.destinationPath('bower.json')
       // );
-    },
-
-    projectfiles: function () {
-      this.fs.copy(
-        this.templatePath('editorconfig'),
-        this.destinationPath('.editorconfig')
-      );
-      this.fs.copy(
-        this.templatePath('jshintrc'),
-        this.destinationPath('.jshintrc')
-      );
     }
+
+    // projectfiles: function () {
+    //   this.fs.copy(
+    //     this.templatePath('editorconfig'),
+    //     this.destinationPath('.editorconfig')
+    //   );
+    //   this.fs.copy(
+    //     this.templatePath('jshintrc'),
+    //     this.destinationPath('.jshintrc')
+    //   );
+    // }
   },
 
   install: function () {
