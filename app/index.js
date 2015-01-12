@@ -39,41 +39,41 @@ module.exports = yeoman.generators.Base.extend({
 
   writing: {
     app: function () {
-      var self = this;
-      self.fsExtra.copy(
-        self.templatePath('application'),
-        self.destinationPath('.'),
-        function(err) {
-          if (err) {
+      // var self = this;
+      // self.fsExtra.copy(
+      //   self.templatePath('/application'),
+      //   self.destinationPath('.'),
+      //   function(err) {
+      //     if (err) {
+      //       console.log("kerker ---")
+      //       return console.error(err) && process.exit(0);
+      //     }
 
-            return console.error(err) && process.exit(0);
-          }
+      //     // self.fs.copyTpl(
+      //     //   self.templatePath('package.json'),
+      //     //   self.destinationPath('package.json'),
+      //     //   { name: self.name }
+      //     // );
 
-          self.fs.copyTpl(
-            self.templatePath('package.json'),
-            self.destinationPath('package.json'),
-            { name: self.name }
-          );
+      //     // self.fs.copyTpl(
+      //     //   self.templatePath('bower.json'),
+      //     //   self.destinationPath('bower.json'),
+      //     //   { name: self.name }
+      //     // );
 
-          self.fs.copyTpl(
-            self.templatePath('bower.json'),
-            self.destinationPath('bower.json'),
-            { name: self.name }
-          );
+      //     // self.fs.copyTpl(
+      //     //   self.templatePath('README.md'),
+      //     //   self.destinationPath('README.md'),
+      //     //   { name: self.name }
+      //     // );
 
-          self.fs.copyTpl(
-            self.templatePath('README.md'),
-            self.destinationPath('README.md'),
-            { name: self.name }
-          );
+      //     // self.fs.copy(
+      //     //   self.templatePath('.bowerrc'),
+      //     //   self.destinationPath('.bowerrc')
+      //     // );
 
-          self.fs.copy(
-            self.templatePath('.bowerrc'),
-            self.destinationPath('.bowerrc')
-          );
-
-          console.log("success!")
-      });
+      //     console.log("success!");
+      // });
 
 
       
