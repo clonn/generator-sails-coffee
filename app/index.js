@@ -39,29 +39,37 @@ module.exports = yeoman.generators.Base.extend({
 
   writing: {
     app: function () {
-
-      this.fsExtra.copy(
-        this.templatePath('./templates/'),
-        this.destinationPath('.'),
+      var self = this;
+      self.fsExtra.copy(
+        self.templatePath('application'),
+        self.destinationPath('.'),
         function(err) {
-          if (err) return console.error(err)
+          if (err) {
 
-          this.fs.copyTpl(
-            this.templatePath('package.json'),
-            this.destinationPath('package.json'),
-            { name: this.name }
+            return console.error(err) && process.exit(0);
+          }
+
+          self.fs.copyTpl(
+            self.templatePath('package.json'),
+            self.destinationPath('package.json'),
+            { name: self.name }
           );
 
-          this.fs.copyTpl(
-            this.templatePath('bower.json'),
-            this.destinationPath('bower.json'),
-            { name: this.name }
+          self.fs.copyTpl(
+            self.templatePath('bower.json'),
+            self.destinationPath('bower.json'),
+            { name: self.name }
           );
 
-          this.fs.copyTpl(
-            this.templatePath('_README.md'),
-            this.destinationPath('README.md'),
-            { name: this.name }
+          self.fs.copyTpl(
+            self.templatePath('README.md'),
+            self.destinationPath('README.md'),
+            { name: self.name }
+          );
+
+          self.fs.copy(
+            self.templatePath('.bowerrc'),
+            self.destinationPath('.bowerrc')
           );
 
           console.log("success!")
