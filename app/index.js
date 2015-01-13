@@ -33,6 +33,10 @@ module.exports = yeoman.generators.Base.extend({
     }], function (answers) {
       this.name = answers.name;
       this.ready = answers.ready;
+
+      if ( ! this.ready) {
+        return process.exit(1);
+      }
       done();
     }.bind(this));
   },
@@ -40,11 +44,6 @@ module.exports = yeoman.generators.Base.extend({
   writing: {
     app: function () {
       var self = this;
-
-      if ( ! self.ready) {
-        console.log("---- error")
-        return;
-      }
 
       self.fsExtra.copy(
         self.templatePath('application'),
