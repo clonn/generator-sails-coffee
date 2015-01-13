@@ -3,4 +3,4 @@ node_js:
   - '0.10'
 before_install:
   - currentfolder=${PWD##*/}
-  - if [ "$currentfolder" != 'generator-sails-nanzi' ]; then cd .. && eval "mv $currentfolder generator-sails-nanzi" && cd generator-sails-nanzi; fi
+  - if [ "$currentfolder" != 'generator-sails-coffee' ]; then cd .. && eval "mv $currentfolder generator-sails-coffee" && cd generator-sails-coffee; fi

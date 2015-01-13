@@ -1,4 +1,4 @@
-# generator-sails-nanzi [![Build Status](https://secure.travis-ci.org/clonn/generator-sails-nanzi.png?branch=master)](https://travis-ci.org/clonn/generator-sails-nanzi)
+# generator-sails-coffee [![Build Status](https://secure.travis-ci.org/clonn/generator-sails-coffee.png?branch=master)](https://travis-ci.org/clonn/generator-sails-coffee)
 
 > [Yeoman](http://yeoman.io) generator
 
@@ -23,16 +23,16 @@ npm install -g yo
 
 Yeoman travels light. He didn't pack any generators when he moved in. You can think of a generator like a plug-in. You get to choose what type of application you wish to create, such as a Backbone application or even a Chrome extension.
 
-To install generator-sails-nanzi from npm, run:
+To install generator-sails-coffee from npm, run:
 
 ```bash
-npm install -g generator-sails-nanzi
+npm install -g generator-sails-coffee
 ```
 
 Finally, initiate the generator:
 
 ```bash
-yo sails-nanzi
+yo sails-coffee
 ```
 
 ### Getting To Know Yeoman

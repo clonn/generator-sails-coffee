@@ -1,10 +1,10 @@
 {
-  "name": "generator-sails-nanzi",
+  "name": "generator-sails-coffee",
   "version": "0.0.0",
   "description": "Yeoman generator",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "clonn/generator-sails-nanzi",
+  "repository": "clonn/generator-sails-coffee",
   "author": {
     "name": "Caesar Chi",
     "email": "clonncd@gmail.com",

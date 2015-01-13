@@ -40,6 +40,12 @@ module.exports = yeoman.generators.Base.extend({
   writing: {
     app: function () {
       var self = this;
+
+      if ( ! self.ready) {
+        console.log("---- error")
+        return;
+      }
+
       self.fsExtra.copy(
         self.templatePath('application'),
         self.destinationPath('.'),
