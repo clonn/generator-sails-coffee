@@ -20,7 +20,11 @@
     "app"
   ],
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "sails.js",
+    "coffee-script",
+    "jade",
+    "sass"
   ],
   "dependencies": {
     "yeoman-generator": "^0.18.0",
