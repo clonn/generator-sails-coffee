@@ -1,3 +1,4 @@
+require 'font-awesome-sass'
 require 'bootstrap-sass'
 require 'compass'
 images_dir = "assets/styles/images/"
