@@ -2,6 +2,9 @@
 
 > [Yeoman](http://yeoman.io) generator
 
+it is a boilplate of sails, and it is total `coffeescript` version, it means you do not need write javascript, totally coffeescript already.
+
+enjoy it.
 
 ## Getting Started
 
