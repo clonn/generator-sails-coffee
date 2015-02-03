@@ -32,6 +32,7 @@
     "yeoman-generator": "^0.18.6"
   },
   "scripts": {
+    "test": "mocha test",
     "start": "coffee app.coffee",
     "build": "compass compile",
     "watch": "parallelshell 'npm run watch:compass' 'npm run watch:livereload' 'npm run watch:coffee'",
@@ -51,6 +52,9 @@
   "devDependencies": {
     "live-reload": "latest",
     "parallelshell": "^1.0.3",
+    "lodash": "^3.1.0",
+    "mocha": "^2.1.0",
+    "chai": "^1.10.0",
     "grunt-bower-task": "^0.4.0"
   }
 }
